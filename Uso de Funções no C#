@@ -1,0 +1,23 @@
+using System;
+
+class Program {
+  public static void Main(string[] args)
+    {   
+        GerandoPreco(600);
+        ExibirMsg();
+        Console.ReadLine();
+    }
+    //Sintaxe de Funções em C#
+    
+    static void ExibirMsg()
+    {
+        Console.WriteLine("Esta é a minha linha de Código! ");
+        Console.WriteLine("Aprender o que são funções no C#");
+    }
+    
+    static void GerandoPreco(int preco)
+    {
+        Console.WriteLine("O Preco tota é: "+ preco); //Concatenando variavel
+        Console.WriteLine(preco);
+    }
+}
