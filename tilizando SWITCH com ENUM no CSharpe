@@ -1,0 +1,45 @@
+tilizando SWITCH com ENUM no C#
+
+using System;
+
+class Program {
+  //Aprendendo a criar um menu usando ENUM e switch
+  enum Opcao { Criar = 1, Deletar, Editar, Listar, Atualizar }
+  
+    
+    static void Main(string[] args) {
+      Console.WriteLine("Selecione uma das opções abaixo: ");
+      Console.WriteLine("1 - Criar\n2 - Deletar\n3 - Editar\n4 - Listar\n5 - Aualizar"); 
+      int indice = int.Parse(Console.ReadLine());//Lembrando que a ReadLine Captura um texto na forma de string. Então fazemos a conversão do texto para inteiro na opção digitada pelo usuário.
+      
+      //Abaixo teremos que converter o indice para o enum opcao atraves do Cast, colocando entre parenteses o enum desejado
+      Opcao opcaoSelecionada = (Opcao)indice;//resumindo essa linha: o enum recebe uma variavel que recebera o enum convertido e assim podemos ultilizar no switch.
+
+
+      //Segue a Sintaxe
+      switch(opcaoSelecionada)
+      {
+        case Opcao.Criar:
+            Console.WriteLine("Você Criará Algo!");
+            break;
+          case Opcao.Deletar:
+            Console.WriteLine("Você Deletará Algo!");
+            break;
+          case Opcao.Editar:
+            Console.WriteLine("Você Editará Algo!");
+            break;
+          case Opcao.Listar:
+            Console.WriteLine("Você Listará Algo!");
+            break;
+          case Opcao.Atualizar:
+            Console.WriteLine("Você Atualizará Algo!");
+            break;
+          
+        
+      }
+      
+      Console.ReadLine();
+        
+  
+    }
+}
