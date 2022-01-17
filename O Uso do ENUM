@@ -1,0 +1,20 @@
+using System;
+					
+public class Program
+{
+//aprendendo a criar enum - ele trabalha com um universo fechado de possibilidades.
+	enum cor{Azul, Verde, Amarelo, Vermelho}
+  //Todos os valores dentro das chaves possuem um indice, ele enumera cada valor digitado bem semelhante a um array.
+	
+	public void Main(string[] args) {
+      //Foi criada uma variavel Corfavorita, dentro do enum COR que recebeu o vermelho
+      cor CorFavorita = cor.Vermelho;
+      cor CorFavoritaThomaz = cor.Azul;
+        
+        //pode-se converter os valores atraves do CAST- que converte um tipo para outro -. Mostrando sua posição com a seguinte sintaxe:
+        Console.WriteLine(CorFavorita);
+        Console.WriteLine(CorFavoritaThomaz);
+      
+        Console.ReadLine();
+	}
+}
