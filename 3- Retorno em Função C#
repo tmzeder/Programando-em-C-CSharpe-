@@ -1,0 +1,23 @@
+using System;
+
+ public class Funcao2
+{
+
+   public void Main(string[] args)
+  {
+      int soma1 = Somar(10,20,30);
+      int soma2 = Somar(200,300,400);
+      int soma3 = Somar(500,1000,2000);
+      Console.WriteLine(soma1);
+      Console.WriteLine(soma2);
+      Console.WriteLine(soma3);
+      
+      Console.ReadLine();
+  }
+  public int Somar(int a, int b, int c)
+  {
+    int Resultado_Final = a + b + c;
+    return Resultado_Final; //palavra reservada dentro do C# que só pode ser ultilizada dentro de funções que servem pra você retornar um valor de acordo com o tipo do seu retorno. Caso a função tenha um tipo então, torne-se obrigatório um retorno a menos que a função seja VOID.
+        //Tudo que está abaixo do Return dentro do mesmo bloco de código é ignorado
+  }
+}
