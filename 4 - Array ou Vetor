@@ -1,0 +1,23 @@
+using System;
+
+class Program {
+  public static void Main(string[] args)
+    {   
+        //sintaxe de array ou vetor
+    string[] meus_produtos = new string[5]
+    {
+        "jogo1",//Posição 0
+        "jogo2",//Posição 1
+        "jogo3",//Posição 2
+        "jogo4",//Posição 3
+        "jogo5"//Posição 4
+    };
+    //podemos mudar as variaveis antes de apresenta-las a seguinte forma
+        meus_produtos[2] = "Novo Jogo 2";
+    
+        Console.WriteLine(meus_produtos[3]);
+        Console.WriteLine(meus_produtos[2]);
+        
+        Console.ReadLine();
+    }
+}
