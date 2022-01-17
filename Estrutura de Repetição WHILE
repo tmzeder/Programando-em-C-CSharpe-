@@ -1,0 +1,19 @@
+using System;
+
+ public class While1
+{
+
+   public void Main(string[] args)
+  {
+	   int contador = 0;
+	   while(contador < 10) // Enquanto fo verdade faça...ou seja, enquanto uma condição for verdade ele continuará executando um bloco de código
+	   {
+		   Console.WriteLine(contador + 1); //Para iniciar do numero 1, se quiser do zero é so manter a variavel
+		   Console.WriteLine("Rodando While"); //Se rodar desta maneira ele fica no loop infinito.
+		   contador = contador +1; // também podendo colocar como contador += 1 ou contador++. Dessa forma o contador vai somar mais um na varivel.
+	   }
+	  Console.WriteLine("Fim do prograna");
+      Console.ReadLine();
+  }
+  
+}
