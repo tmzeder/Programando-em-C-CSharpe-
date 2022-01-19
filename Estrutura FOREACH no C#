@@ -1,0 +1,18 @@
+using System;
+
+public class Program {
+    public static void Main(string[] args) {
+
+      string[] nomes = {"thomaz", "Eder", "Souza", "jacqueline", "Silva", "Aurora", "Sanches"};
+//Sintaxe do FOREACHa 
+//primeiro você tem uma variável de loop que tem que ser do mesmo tipo do array/vetor que você vai percorrer, no caso aqui string.
+      
+      foreach(string palavra in nomes){
+        //para cada palavra em array/vetor, repita o bloco e código abaixo.
+        Console.WriteLine("Rodando o FOREACH ");
+      } 
+    
+      Console.WriteLine("Fim do Programa ");
+      Console.ReadLine();
+    }
+}
