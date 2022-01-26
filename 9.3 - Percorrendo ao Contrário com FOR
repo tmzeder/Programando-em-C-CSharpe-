@@ -10,10 +10,12 @@ public class Program
 		//Lembrando que nosso array/vetor tem 5 elementos e o contador não deve ser maior que o array
 		
 		for(int contador = 4; contador >= 0 ;contador--){
+			
+			//Poderiamos usar a seguinte sintaxe: for(int contador = palavras.Length -1, contador >= 0, contador--);
 			//Enquanto o contador for maior ou igual a zero, subtraimos 1
 			//Lembrando que o array começa a contar do zero e não do 1
 			
-			Console.WriteLine(palavras[contador] +" Rodando For"); //concatenando a variavel junto com string
+			Console.WriteLine(palavras[contador] +" Rodando For"); //Concatenando a variavel junto com string
 			Console.WriteLine(contador);
 			Console.WriteLine("Rodando FOR na linha abaixo. "); // forma tradicional.
 			
