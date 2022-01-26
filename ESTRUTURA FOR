@@ -1,0 +1,14 @@
+using System;
+					
+public class Program
+{ //Sintaxe do FOR 
+	public static void Main()
+	{
+		//para a variavel contador recebendo 0 se o contador for menor que 10 o contador acrescenta mais um
+		for(int contador = 0; contador < 10 ;contador++){
+			Console.WriteLine(contador +" Rodando For"); //concatenando a variavel junto com string
+			Console.WriteLine("Rodando FOR na linha abaixo. "); // forma tradicional.
+		}
+		Console.ReadLine();
+	}
+}
