@@ -1,0 +1,24 @@
+using System;
+					
+public class Program
+{ //Sintaxe do FOR 
+	public static void Main()
+	{ 
+		string[] palavras = {"Exemplo_1", "Exemplo_2", "Exemplo_3", "Exemplo_4", "Exemplo_5"};
+		
+		//para a variavel contador recebendo 0 se o contador for menor que 5 o contador acrescenta mais um
+		//Lembrando que nosso array/vetor tem 5 elementos e o contador não deve ser maior que o array
+		
+		for(int contador = 0; contador < palavras.Length ;contador++){
+			//neste caso de maneira mais inteligente podemos pegar o array "Palavras" e colocar a palavra reservada Length que nos mostrará os elementos do array
+			//então temos: para o contador valendo zero, será analisado se ele é menor que o tamanho do array Palavras e se for menor sera contador mais um.
+			
+			Console.WriteLine(palavras[contador] +" Rodando For"); //concatenando a variavel junto com string
+			Console.WriteLine(contador);
+			Console.WriteLine("Rodando FOR na linha abaixo. "); // forma tradicional.
+			
+		}
+		Console.WriteLine("Fim do Programa" );
+		Console.ReadLine();
+	}
+}
