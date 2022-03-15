@@ -1,19 +1,25 @@
 using System;
 
-class Program {
-    static void Main(string[] args) 
+class Program 
 {
-        int populacao = 0;
-        int confianca = 0;
+    static void Main(string[] args)
+    {   int populacao = 0;
+        int op = 0;
         Console.WriteLine("Qual o tamanho da população?: ");
         populacao = int.Parse(Console.ReadLine());
       
-        while (confianca == 0)
-{
-          Console.WriteLine("\n1 - Confiança de 90%.\n"
+        while (op == 0)
+        {  Console.WriteLine("\n1 - Confiança de 90%.\n"
                            +"\n2 - Confiança de 95%.\n"
                            +"\n3 - Confiança de 95,5%.\n"
                            +"\n4 - Confiança de 99%.\n");
           
           Console.WriteLine("Escolha uma das opções para revelar o nível de confiança da pesquisa!");
-          confianca = int.Parse(Console.ReadLine());
+          op = int.Parse(Console.ReadLine());
+         if(op == 1)
+         {
+           
+         }
+        }
+    }
+}
