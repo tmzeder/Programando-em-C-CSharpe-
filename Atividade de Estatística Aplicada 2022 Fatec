@@ -19,22 +19,29 @@ class Program
          
          if(op == 1)
         {
-         double op2 = 1.65;
+         double confianca = 1.65;
         }
          else if(op == 2)
          {
-           double op2 = 1.96;
+           double confianca = 1.96;
          }
          else if(op == 3)
          {
-           double op2 = 2;
+           double confianca = 2;
          }
          else if(op == 4)
          {
-           double op2 = 2.57;
+           double confianca = 2.57;
           
          }
-          Console.ReadLine();
+         
     }
+         double erro = 0;
+        
+         Console.WriteLine("Qual a porcentagem do erro amostral?: ");
+          erro = double.Parse(Console.ReadLine());
+          
+
+          Console.ReadLine();
 }
 }
