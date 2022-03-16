@@ -1,0 +1,30 @@
+using System;
+
+class Program {
+    static void Main(string[] args) 
+    {
+      Console.WriteLine("-----Operadores aritméticos-----\n");
+      
+      int n1 = 3 + 4 * 2;
+      int n2 = (3 + 4) * 2;
+      int n3 = 17 % 3;
+
+      double n4 = (double)10 / 8;
+        Console.WriteLine($"Valores das variaveis: {n1}\n {n2}\n {n3}\n {n4}");
+
+      Console.WriteLine("-----Formula de Baskara usando operadores aritméticos!-----\n");
+      
+      
+
+      double a = 1.0, b = -3.0, c = -4.0;
+      double delta = b * b - 4.0 * a * c;
+      double x1 = (-b + Math.Sqrt(delta)) / (2 * a);
+      double x2 = (-b - Math.Sqrt(delta)) / (2 * a);
+      
+      Console.WriteLine($"Delta valendo: {delta} e X1 valendo: {x1}"); 
+      Console.WriteLine($"Delta valendo: {delta} e X2 valendo: {x2}");
+      
+      Console.ReadLine();
+      
+    }
+}
