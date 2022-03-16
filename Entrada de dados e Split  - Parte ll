@@ -4,7 +4,7 @@ using System;
 class Program {
     static void Main(string[] args) 
     {
-      Console.WriteLine("-----Entrada de Dados - Parte 2 ");
+      Console.WriteLine("-----Entrada de Dados - Parte 2-----");
       int n1 = int.Parse(Console.ReadLine());
       char ch = char.Parse(Console.ReadLine());
       double n2 = double.Parse(Console.ReadLine());
