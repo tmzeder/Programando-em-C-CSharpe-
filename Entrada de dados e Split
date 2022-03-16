@@ -1,0 +1,27 @@
+using System;
+
+class Program {
+    static void Main(string[] args) 
+    {
+      Console.WriteLine("----Entrada de Dados - Parte 1 ----");
+
+      string frase = Console.ReadLine();
+
+      string x = Console.ReadLine();
+      string y = Console.ReadLine();
+      string z = Console.ReadLine();
+
+      string s = Console.ReadLine();
+      //ou ao inves de digitar a variavel "s" fazemos apenas string[] vetor = Console.ReadLine().Split que funciona também.
+      
+      string[] vetor = s.Split(' ');
+      string a = vetor[0];
+      string b = vetor[1];
+      string c = vetor[2];
+      
+      Console.WriteLine($"{a}\n{b}\n{c}");
+           
+      Console.WriteLine($"Você Digitou:\n{frase}\n{x}\n{y}\n{z}");
+      
+    }
+}
