@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercicio_1
+{
+    class Program
+    {
+        static void crescente(int ni, int nf)
+        {
+            if (ni <= nf)
+            {
+                Console.WriteLine(ni);
+                crescente(ni + 1, nf);
+            }
+        }
+        static void decrescente(int ni, int nf)
+        {
+            if (ni <= nf)
+            {
+                decrescente(ni + 1, nf);
+                Console.WriteLine(ni);
+            }
+        }
+        static void impares(int ni, int nf)
+        {
+            if (ni <= nf)
+            {
+                if (ni % 2 != 0)
+                   Console.WriteLine(ni);
+                impares(ni + 1, nf);
+            }
+        }
+      static int somatorio(int ni, int nf)
+      {
+        if (ni < nf)
+        {
+          return somatorio(ni+1, nf) + ni;
+        }
+        else
+          return ni;
+      }
+
+        static void Main(string[] args)
+        {
+            int op = 1;
+            int ni, nf;
+            while (op!=3)
+            {
+                Console.WriteLine("MENU");
+                Console.WriteLine("1 - Funcoes sem vetor");
+                Console.WriteLine("2 - Funcoes com vetor");
+                Console.WriteLine("3 - Sair");
+                Console.WriteLine("Opcao desejada:");
+                op = Convert.ToInt32(Console.ReadLine());
+                if (op == 1)
+                {
+                    Console.WriteLine("Numero inicial");
+                    ni = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Numero final");
+                    nf = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("SUBMENU");
+                    Console.WriteLine("1 - Crescente");
+                    Console.WriteLine("2 - Decrescente");
+                    Console.WriteLine("3 - Impares");
+                    Console.WriteLine("4 - Somatorio");
+                    Console.WriteLine("5 - Voltar");
+                    int op2=Convert.ToInt32(Console.ReadLine());
+                    if (op2 == 1)
+                        crescente(ni, nf);
+                    else if (op2 == 2)
+                        decrescente(ni, nf);
+                    else if (op2 == 3)
+                        impares(ni, nf);
+                }
+            }
+        }
+
+    }
+}
