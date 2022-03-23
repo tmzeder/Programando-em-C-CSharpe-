@@ -5,7 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Exercicio_1
-{
+{   //Faça um programa que apresente um menú inicial com as seguintes opções:
+//MENU INICIAL; FUNÇÃO SEM VETOR; FUNÇÃO COM VETOR; DIGITE A OPÇÁO DESEJADA.
+//Se o usuário escolher a opção 1, solicite um numero inteiro inicial e um numero final. Em seguida apresente um segundo menú com as seguintes opções:
+//ENTRE COM O NÚMERO INICIAL E FINAL;INTEIROS EM ORDEM CRESCENTE;INTEIROS EM ORDEM DECRESCENTE;SOMATÓRIO DOS INTEIROS;INTEIROS IMPÁRES.
+//Faça uma função recursiva para cada opção desse menú.
+//Se o usuário escolher a opçção 2 (do menú inicial), solicite vários números inteiros (utilizando vetor)em seguida faça uma função recursiva que calcule o somatório dos números inteiros do vetor.
     class Program
     {
         static void crescente(int ni, int nf)
