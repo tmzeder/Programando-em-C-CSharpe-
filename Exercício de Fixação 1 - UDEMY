@@ -1,24 +1,34 @@
 using System;
 
-
 class Program {
-    static void Main(string[] args) 
+    static void Main(string[] args)
     {
-      Console.WriteLine("Digite seu nome completo:");
-      string nome1 = (Console.ReadLine());
-      Console.WriteLine("Quantos quartos tem sua casa?:");
-      int quarto = int.Parse(Console.ReadLine());
-      Console.WriteLine("Entre com o preço de um produto:");
-      double preco = double.Parse(Console.ReadLine());
+      Console.WriteLine("Informe o 1º valor: ");
+      int num1 = int.Parse(Console.ReadLine());
 
-      Console.WriteLine("Entre com seu ultimo nome, idade e altura:");
-      string[] vetor = Console.ReadLine().Split(' ');
-      string nome2 = vetor[0];
-      int idade = int.Parse(vetor[1]);
-      double altura = double.Parse(vetor[2]);
+      Console.WriteLine("Informe o 2º valor: ");
+      int num2 = int.Parse(Console.ReadLine());
+      int soma = num1 + num2;
+      Console.WriteLine($"A Soma dos valores é: {soma}");
+    
+    double area, raio, pi = 3.14159;
 
-      Console.WriteLine($"Você digitou:\n{nome2}\n{idade}\n{altura}");
-      Console.WriteLine($"Você Digitou:\n{nome1}\n{quarto}\n{preco}");
+    raio = double.Parse(Console.ReadLine());
+    area = raio * pi *raio;
+
+    Console.WriteLine($"O valor da area é: {area.ToString ("F4")}");
+
       
-    }
-}
+      Console.WriteLine("Informe os valores para saber a diferença: ");
+      int a, b, c, d, diferenca;
+      
+        a = int.Parse(Console.ReadLine());
+        b = int.Parse(Console.ReadLine());
+        c = int.Parse(Console.ReadLine());
+        d = int.Parse(Console.ReadLine());
+        diferenca = a * b - c * d;
+
+      Console.WriteLine($"A Diferença entre os valores é: {diferenca}");
+      
+    } 
+  }
