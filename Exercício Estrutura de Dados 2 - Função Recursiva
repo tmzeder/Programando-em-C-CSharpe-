@@ -1,0 +1,144 @@
+using System;
+
+namespace Exercício_2
+{
+    class Program
+    {
+
+        static int potencia(int X1, int Y1)
+        {//Escreva uma função recursiva chamada potencia(x, y),
+         //que retorne a base x elevado ao expoente y.
+
+            if (Y1 == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return X1 * potencia(X1, Y1 - 1);
+            }
+        }
+        //Implemente uma versão recursiva da seguinte função iterativa. Faça a repetição recursiva somente do for, não precisa fazer da expressão i * i * i.
+        //void cubos (int n)
+        //{
+        //for (int i = 1; i <= n; i++)
+        //Console.WriteLine(i * i * i);
+        // }
+        static void cubo(int n)
+        {
+            if (n >= 1)
+            {
+                cubo(n - 1);
+                Console.WriteLine(n * n * n);
+
+            }
+        }
+        //Baseado no algoritmo de Euclides, implemente uma função recursiva para determinar o máximo divisor comum (mdc) entre dois números inteiros x e y.
+        //Algoritmo de Euclides:
+        //se (x = y) retorna x
+        //senão se (x < y) retorna mdc(y, x)
+        //senão retorna mdc(x - y, y)
+        static int mdc(int x, int y)
+        {
+            if (x == y)
+            {
+                return x;
+            }
+            else if (x < y)
+            {
+                return mdc(y, x);
+            }
+            else
+            {
+                return mdc(x - y, y);
+            }
+        }
+        //A Série de Fibonacci pode ser definida da seguinte maneira:
+        //se (n == 0 ou n == 1) retorna n
+        //se (n >= 2) retorna fib(n – 1) + fib(n – 2)
+        // se não returna zero
+        //====================================================================
+        //Seja fib(n) uma função que retorna o n-ésimo termo da série de Fibonacci, implemente uma versão recursiva e //outra iterativa. Observe que a partir de um determinado número, a função recursiva começa a ficar mais lenta //que a iterativa.
+        static int Fibonacci(int n)
+        {
+            if (n == 0 || n == 1)
+            {
+                return n;
+            }
+            else if (n >= 2)
+            {
+                return Fibonacci(n - 1) + (Fibonacci(n - 2));
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        //Defina uma função recursiva que converte um número inteiro para a base binária.
+        static void binario(int num)
+        {
+            if (num / 2 != 0)
+            {
+                binario(num / 2);
+            }
+            Console.WriteLine(num % 2);
+        }
+
+
+        static void Main(string[] args)
+        {
+            int op = 0;
+            while (op != 5)
+            {
+                Console.WriteLine("=-=-=-=- Selecione uma das opções abaixo =-=-=-=-");
+                Console.WriteLine("1 → Potenciação.");
+                Console.WriteLine("2 → Cubo.");
+                Console.WriteLine("3 → Eucliedes MDC.");
+                Console.WriteLine("4 → Fibonacci.");
+                Console.WriteLine("5 → Base Binária.");
+
+                op = Convert.ToInt32(Console.ReadLine());
+                if (op == 1)
+                {
+                    Console.WriteLine("Informe o Valor da Base: ");
+                    int X1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Informe o Valor do Expoente: ");
+                    int Y1 = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine(X1 + " elevado a " + Y1 + " = " + potencia(X1, Y1));
+                }
+
+                else if (op == 2)
+                {
+                    Console.WriteLine("Informe um valor: ");
+                    int n = int.Parse(Console.ReadLine());
+                    cubo(n);
+
+                }
+                if (op == 3)
+                {
+                    Console.WriteLine("Informe um valor para saber o MDC: ");
+                    int x = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Informe outro valor para saber o MDC: ");
+                    int y = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"O MDC dos entre os valores é: {mdc(x, y)}");
+                }
+                if (op == 4)
+                {
+                    Console.WriteLine("Informe um valor para saber o FIBONACCI: ");
+                    int n = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"Implementação de FIBONACCI: {Fibonacci(n)}");
+
+                }
+                if (op == 5)
+                {
+                    Console.WriteLine("Informe o nº para saber a base Binária: ");
+                    int num = int.Parse(Console.ReadLine());
+                    binario(num);
+                }
+
+
+            }
+        }
+    }
+}
